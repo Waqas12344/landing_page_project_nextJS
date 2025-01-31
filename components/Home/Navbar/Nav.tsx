@@ -4,7 +4,11 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 
-const Nav = () => {
+type Props ={
+    openNav:()=>void
+}
+
+const Nav = ({openNav}:Props) => {
     const [navBg,setNavBG]=useState(false)
 
     useEffect(()=>{
@@ -39,7 +43,7 @@ const Nav = () => {
                 <button className='md:px-8 md:py-2.5 px-6 py-2 text-white font-semibold text-base bg-blue-700 hover:bg-blue-900 transition-all duration-200 rounded-full'>Join Now</button>
 
                 {/* burger menu  */}
-                <HiBars3BottomRight className='w-8 h-8 cursor-pointer text-black lg:hidden'/>
+                <HiBars3BottomRight onClick={openNav} className='w-8 h-8 cursor-pointer text-black lg:hidden'/>
             </div>
         </div>
     </div>

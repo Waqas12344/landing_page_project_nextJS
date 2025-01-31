@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Hero from './Hero/Hero'
 const Home = () => {
   return (
-    <div className='overflew-hidden h-[190vh]'>Home</div>
+    <div className='overflew-hidden '>
+      <Hero/>
+    </div>
   )
 }
 
